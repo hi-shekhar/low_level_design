@@ -95,4 +95,9 @@ export class VendingMachine {
     }
     console.log("***************************************************")
   }
+
+  displayWallet() {
+    console.log("\n*****Vending Machine Wallet****\n");
+    console.log("Vault Money : ", this.getVaultMoney(), "Transaction Money : ", this.getTransactionMoney());
+  }
 }
