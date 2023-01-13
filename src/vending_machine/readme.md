@@ -13,6 +13,7 @@ The State Pattern allows an object to alter its behavior when its internal state
 
 **Vending Machine**
 
+![Vending Machine State](./../assets/vending_state_diagram.png)
 
 **Idle Steps:**
 
