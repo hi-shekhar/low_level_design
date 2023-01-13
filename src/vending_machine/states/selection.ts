@@ -1,6 +1,7 @@
 import { ShelfItem } from "../inventory/types";
 import { VendingMachine } from "../vendingMachine";
 import { DispenseState } from "./dispense";
+import { IdleState } from "./idle";
 import State from "./state";
 
 export class SelectionState implements State {
@@ -23,7 +24,7 @@ export class SelectionState implements State {
   chooseProduct(machine: VendingMachine, code: number): void {
     try {
       // get the product availability 
-        let itemDetail = machine.inventory.getItem(code, true) as ShelfItem;
+        let itemDetail = machine.inventory.getItemDetail(code);
         let extraMoney = machine.getTransactionMoney() - itemDetail.price;
 
       // Check if dispense can happen ?
@@ -62,6 +63,7 @@ export class SelectionState implements State {
   refundAll(machine: VendingMachine): void {
     console.log("Refund Amount : ", machine.getTransactionMoney());
     machine.updateTransactionMoney(-Math.abs(machine.getTransactionMoney()));
+    machine.state = new IdleState();
   }
 
   updateInventory(machine: VendingMachine): void {
