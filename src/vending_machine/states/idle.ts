@@ -1,5 +1,5 @@
 import { VendingMachine } from "../vendingMachine";
-import { AcceptMoneyState } from "./acceptMoney";
+import { PaymentState } from "./payment";
 import State from "./state";
 
 export class IdleState implements State {
@@ -8,14 +8,14 @@ export class IdleState implements State {
   }
 
   selectInsertMoney(machine: VendingMachine) {
-    machine.state = new AcceptMoneyState();
+    machine.state = new PaymentState();
   }
 
   selectProductSelection(machine: VendingMachine) {
     console.log("Idle state: I don't do product selection");
   }
 
-  acceptMoney(machine: VendingMachine, money: number) {
+  payment(machine: VendingMachine, money: number) {
     console.log("Idle state: I don't accept money");
   }
 

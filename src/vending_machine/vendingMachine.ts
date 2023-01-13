@@ -80,24 +80,36 @@ export class VendingMachine {
 
   displayInventory() {
     let inventories = this.inventory.inventory;
-    console.log("\n************** Inventory Status **************\n")
+    console.log("\n************** Inventory Status **************\n");
     for (let i = 0; i < inventories.length; i++) {
       console.log(
         "Code :",
         inventories[i].code,
         " | Type : ",
-        inventories[i].getShelfDetail().item.concat(" ".repeat(11 - inventories[i].getShelfDetail().item.length)),
+        inventories[i]
+          .getShelfDetail()
+          .item.concat(
+            " ".repeat(11 - inventories[i].getShelfDetail().item.length)
+          ),
         " | Price : ",
-        inventories[i].getShelfDetail().price + " ".repeat(3 - inventories[i].getShelfDetail().price.toString().length),
+        inventories[i].getShelfDetail().price +
+          " ".repeat(
+            3 - inventories[i].getShelfDetail().price.toString().length
+          ),
         " | Quantity : ",
         inventories[i].getShelfDetail().quantity
       );
     }
-    console.log("***************************************************")
+    console.log("***************************************************");
   }
 
   displayWallet() {
     console.log("\n*****Vending Machine Wallet****\n");
-    console.log("Vault Money : ", this.getVaultMoney(), "Transaction Money : ", this.getTransactionMoney());
+    console.log(
+      "Vault Money : ",
+      this.getVaultMoney(),
+      "Transaction Money : ",
+      this.getTransactionMoney()
+    );
   }
 }
