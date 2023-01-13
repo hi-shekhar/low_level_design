@@ -17,7 +17,7 @@ export class SelectionState implements State {
     console.log("Selection state: Hey Buddy you already selecting a product")
   }
 
-  acceptMoney(machine: VendingMachine, money: number) {
+  payment(machine: VendingMachine, money: number) {
     console.log("Selection state , Merko Paise nahi Mangta");
   }
 

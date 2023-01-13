@@ -3,7 +3,7 @@ import { IdleState } from "../../src/vending_machine/states/idle";
 import { SelectionState } from "../../src/vending_machine/states/selection";
 import { VendingMachine } from "./../../src/vending_machine/vendingMachine";
 import State from "./../../src/vending_machine/states/state";
-import { AcceptMoneyState } from "../../src/vending_machine/states/acceptMoney";
+import { PaymentState } from "../../src/vending_machine/states/payment";
 import { DispenseState } from "../../src/vending_machine/states/dispense";
 
 describe("Test the Vending Machine", () => {
@@ -46,11 +46,11 @@ describe("Test the Vending Machine", () => {
     it("Switch to Accept Money State", () => {
       currentState.selectInsertMoney(vendingMachine);
       currentState = vendingMachine.state;
-      expect(currentState).to.be.instanceOf(AcceptMoneyState);
+      expect(currentState).to.be.instanceOf(PaymentState);
     });
 
     it("Insert money in Vending Machine", () => {
-      currentState.acceptMoney(vendingMachine, 50);
+      currentState.payment(vendingMachine, 50);
       expect(vendingMachine.getTransactionMoney()).equal(50);
     });
 
@@ -114,11 +114,11 @@ describe("Test the Vending Machine", () => {
     it("Switch to Accept Money State", () => {
       currentState.selectInsertMoney(vendingMachine);
       currentState = vendingMachine.state;
-      expect(currentState).to.be.instanceOf(AcceptMoneyState);
+      expect(currentState).to.be.instanceOf(PaymentState);
     });
 
     it("Insert money in Vending Machine", () => {
-      currentState.acceptMoney(vendingMachine, 50);
+      currentState.payment(vendingMachine, 50);
       expect(vendingMachine.getTransactionMoney()).equal(50);
     });
 

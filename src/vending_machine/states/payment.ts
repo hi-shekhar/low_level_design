@@ -2,7 +2,7 @@ import { VendingMachine } from "../vendingMachine";
 import { SelectionState } from "./selection";
 import State from "./state";
 
-export class AcceptMoneyState implements State {
+export class PaymentState implements State {
   constructor() {
     console.log("Machine is in Accept Money state");
   }
@@ -15,7 +15,7 @@ export class AcceptMoneyState implements State {
     machine.state = new SelectionState();
   }
 
-  acceptMoney(machine: VendingMachine, money: number): void {
+  payment(machine: VendingMachine, money: number): void {
     machine.updateTransactionMoney(money);
     console.log(`Accept Money State : Total Money Received = ${machine.getTransactionMoney()}`);
   }

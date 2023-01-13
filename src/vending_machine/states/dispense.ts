@@ -16,7 +16,7 @@ export class DispenseState implements State {
     console.log("Dispense state: Hey Buddy you already selecting a product")
   }
 
-  acceptMoney(machine: VendingMachine, money: number) {
+  payment(machine: VendingMachine, money: number) {
     console.log("Dispense state , Merko Paise nahi Mangta");
   }
 
