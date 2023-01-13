@@ -1,5 +1,6 @@
 import { Item } from "../inventory/item";
 import { VendingMachine } from "../vendingMachine";
+import { IdleState } from "./idle";
 import State from "./state";
 
 export class DispenseState implements State {
@@ -36,6 +37,7 @@ export class DispenseState implements State {
       }
       machine.updateTransactionMoney(-Math.abs(machine.getTransactionMoney()))
       console.log("Dispensing the product....", product.getType());
+      machine.state = new IdleState();
     } catch(err) {
       console.log("Error ", err);
       machine.state.refundAll(machine);

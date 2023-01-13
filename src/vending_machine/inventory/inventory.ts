@@ -38,7 +38,15 @@ export class Inventory {
     }
   }
 
-  getItem(code: number, detail: boolean = false): Item | ShelfItem {
+  getItem(code: number): Item {
+    return this.getItemOrDetail(code, false) as Item;
+  }
+
+  getItemDetail(code: number): ShelfItem {
+    return this.getItemOrDetail(code, true) as ShelfItem;
+  }
+
+  private getItemOrDetail(code: number, detail: boolean): Item | ShelfItem {
     let selectedInventory = this.inventory.find((item) => item._code === code);
     if(selectedInventory  && !selectedInventory.isSoldOut()) {
       return detail ? selectedInventory.getShelfDetail() : selectedInventory.getItem();
