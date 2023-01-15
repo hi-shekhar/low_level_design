@@ -1,14 +1,14 @@
 import { Inventory, ItemShelf } from "./inventory/inventory";
+import PaymentMethod from "./payment/paymentMethod";
 import { Card } from "./payment/card";
 import { NetBanking } from "./payment/netBanking";
-import { Payment } from "./payment/payment";
 import { Upi } from "./payment/upi";
 import { Wallet } from "./payment/wallet";
 
 export default class ShoppingKart {
   inventory: Inventory;
   basket: ItemShelf[] = [];
-
+  payment: PaymentMethod;
   constructor() {
     console.log("Let do shopping");
     this.inventory = new Inventory();
@@ -56,7 +56,7 @@ export default class ShoppingKart {
   }
 
   // As console read is not direct way in node.js so, going through random way
-  async doPayment(payMethod?: Payment | undefined): Promise<Boolean> {
+  async doPayment(payMethod?: PaymentMethod | undefined): Promise<Boolean> {
     try {
       let paymentMethods = [
         new Card(),

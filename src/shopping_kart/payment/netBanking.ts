@@ -1,6 +1,6 @@
-import { Payment } from "./payment";
+import PaymentMethod from "./paymentMethod";
 
-export class NetBanking implements Payment {
+export class NetBanking implements PaymentMethod {
   constructor() {}
 
   pay(): Promise<boolean> {

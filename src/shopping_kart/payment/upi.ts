@@ -1,6 +1,6 @@
-import { Payment } from "./payment";
+import PaymentMethod from "./paymentMethod";
 
-export class Upi implements Payment {
+export class Upi implements PaymentMethod {
   constructor() {}
 
   pay(): Promise<boolean> {
