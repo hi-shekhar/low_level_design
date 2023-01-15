@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test-vm": "mocha test/vending_machine/test.ts",
+    "test-sk": "mocha test/shopping_kart/test.ts"
   },
   "mocha": {
     "require": [
