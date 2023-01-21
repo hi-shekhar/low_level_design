@@ -1,9 +1,8 @@
-import { displayElements } from "./displayElements";
 import { Observable } from "./observable";
 import { Observer } from "./observer";
 import { v4 as uuidv4 } from "uuid";
 
-export default class NewsUsers implements Observer, displayElements {
+export default class NewsUsers implements Observer {
   observable: Observable;
   id: number;
   constructor(obs: Observable) {
@@ -13,10 +12,6 @@ export default class NewsUsers implements Observer, displayElements {
 
   update(): void {
     console.log(`user id : ${this.id} updated`);
-  }
-
-  display(): void {
-    console.log(`user id : ${this.id} display`);
   }
 }
 
