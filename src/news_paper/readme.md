@@ -14,7 +14,7 @@ object changes state, all of its dependents are notified and updated automatical
 
 **New Paper Publication**
 
-![New Paper](./../assets/news_paper.png)
+![New Paper Publication](./../assets/news_paper.png)
 
 **Idle Steps:**
 
