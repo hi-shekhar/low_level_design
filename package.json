@@ -7,7 +7,8 @@
     "test": "mocha",
     "test-vm": "mocha test/vending_machine/test.ts",
     "test-sk": "mocha test/shopping_kart/test.ts",
-    "test-np": "mocha test/news_paper/test.ts"
+    "test-np": "mocha test/news_paper/test.ts",
+    "test-car": "mocha test/car/test.ts"
   },
   "mocha": {
     "require": [
