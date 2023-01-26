@@ -1,6 +1,6 @@
-import LogisticApp from "./logisticApp";
-import Transport from "./transport";
-import Truck from "./truck";
+import LogisticApp from "../logisticApp";
+import Transport from "../concrete_product/transport";
+import Truck from "../concrete_product/truck";
 
 export default class RoadLogistic extends LogisticApp {
   constructor() {

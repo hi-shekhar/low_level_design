@@ -1,6 +1,7 @@
-import LogisticApp from "./logisticApp";
-import Ship from "./ship";
-import Transport from "./transport";
+import Ship from "../concrete_product/ship";
+import Transport from "../concrete_product/transport";
+import LogisticApp from "../logisticApp";
+
 
 export default class SeaLogistic extends LogisticApp {
   constructor() {
