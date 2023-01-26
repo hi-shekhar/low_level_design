@@ -5,7 +5,9 @@ export default abstract class LogisticApp {
     console.log("welcome to the Logistic App");
   }
 
-  planDelivery() {}
+  planDelivery(): Transport {
+   return this.createTransport();
+  }
 
   abstract createTransport(): Transport;
 }

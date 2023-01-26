@@ -13,7 +13,7 @@ describe("Test the Logistic Application", () => {
     let roadLogistic: RoadLogistic = new RoadLogistic();
 
     it("Select the Truck vehicle", () => {
-      let truck: Transport = roadLogistic.createTransport();
+      let truck: Transport = roadLogistic.planDelivery();
       expect(truck).to.be.instanceOf(Truck);
     });
   });
@@ -22,7 +22,7 @@ describe("Test the Logistic Application", () => {
     let seaLogistic: SeaLogistic = new SeaLogistic();
 
     it("Select the Ship vehicle", () => {
-      let ship: Transport = seaLogistic.createTransport();
+      let ship: Transport = seaLogistic.planDelivery();
       expect(ship).to.be.instanceOf(Ship);
     });
   });
