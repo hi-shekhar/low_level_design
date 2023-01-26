@@ -8,7 +8,8 @@
     "test-vm": "mocha test/vending_machine/test.ts",
     "test-sk": "mocha test/shopping_kart/test.ts",
     "test-np": "mocha test/news_paper/test.ts",
-    "test-car": "mocha test/car/test.ts"
+    "test-car": "mocha test/car/test.ts",
+    "test-logistic": "mocha test/logistic_app/test.ts"
   },
   "mocha": {
     "require": [
