@@ -1,4 +1,4 @@
-import Transport from "./transport";
+import Transport from "./concrete_product/transport";
 
 export default abstract class LogisticApp {
   constructor() {
