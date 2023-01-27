@@ -1,5 +1,5 @@
-import NewsUsers from "../../src/news_paper/newsUsers";
-import NewsPaper from "../../src/news_paper/newsPaper";
+import NewsUsers from "../../../src/observer/news_paper/newsUsers";
+import NewsPaper from "../../../src/observer/news_paper/newsPaper";
 import { expect } from "chai";
 import * as sinon from "sinon";
 
@@ -50,13 +50,13 @@ describe("Test the News Publication", () => {
       expect(update.calledOnce).to.be.false;
     });
 
-    it('remove the User 1 from the subscription', () => {
+    it("remove the User 1 from the subscription", () => {
       news_paper.removeClient(user_1);
       let output = news_paper.subscribers.filter(
         (subscriber) => subscriber.id === user_1.id
       );
       expect(output.length).equal(0);
-    })
+    });
 
     it("User 1 can't be notified", () => {
       let update = sinon.spy(user_1, "update");

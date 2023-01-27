@@ -1,14 +1,13 @@
 import { expect } from "chai";
-import Transport from "../../src/logistic_app/concrete_product/transport";
+import Transport from "../../../src/factory_method/logistic_app/concrete_product/transport";
 
-import RoadLogistic from "../../src/logistic_app/concerete_creator/roadLogistic";
-import SeaLogistic from "./../../src/logistic_app/concerete_creator/seaLogistic";
+import RoadLogistic from "../../../src/factory_method/logistic_app/concerete_creator/roadLogistic";
+import SeaLogistic from "./../../../src/factory_method/logistic_app/concerete_creator/seaLogistic";
 
-import Truck from "../../src/logistic_app/concrete_product/truck";
-import Ship from "../../src/logistic_app/concrete_product/ship";
+import Truck from "../../../src/factory_method/logistic_app/concrete_product/truck";
+import Ship from "../../../src/factory_method/logistic_app/concrete_product/ship";
 
 describe("Test the Logistic Application", () => {
-
   describe("Test Road Logistic", () => {
     let roadLogistic: RoadLogistic = new RoadLogistic();
 
@@ -26,5 +25,4 @@ describe("Test the Logistic Application", () => {
       expect(ship).to.be.instanceOf(Ship);
     });
   });
-
 });

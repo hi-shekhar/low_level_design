@@ -1,13 +1,11 @@
 import { expect } from "chai";
-import { IdleState } from "../../src/vending_machine/states/idle";
-import { SelectionState } from "../../src/vending_machine/states/selection";
-import { VendingMachine } from "./../../src/vending_machine/vendingMachine";
-import State from "./../../src/vending_machine/states/state";
-import { PaymentState } from "../../src/vending_machine/states/payment";
-import { DispenseState } from "../../src/vending_machine/states/dispense";
+import { IdleState } from "../../../src/state_design/vending_machine/states/idle";
+import { SelectionState } from "../../../src/state_design/vending_machine/states/selection";
+import { VendingMachine } from "./../../../src/state_design/vending_machine/vendingMachine";
+import State from "./../../../src/state_design/vending_machine/states/state";
+import { PaymentState } from "../../../src/state_design/vending_machine/states/payment";
 
 describe("Test the Vending Machine", () => {
-
   describe("Perfect scenario: Buy Coca-Cola , Code: 101", () => {
     let vendingMachine: VendingMachine;
     let currentState: State;
@@ -81,7 +79,7 @@ describe("Test the Vending Machine", () => {
     let vendingMachine: VendingMachine;
     let currentState: State;
     let SHELF_COUNT = 6;
-    
+
     before(() => {
       vendingMachine = new VendingMachine(SHELF_COUNT);
       currentState = vendingMachine.state;

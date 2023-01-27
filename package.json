@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "test-vm": "mocha test/vending_machine/test.ts",
-    "test-sk": "mocha test/shopping_kart/test.ts",
-    "test-np": "mocha test/news_paper/test.ts",
-    "test-car": "mocha test/car/test.ts",
-    "test-logistic": "mocha test/logistic_app/test.ts",
-    "test-abs-logistic": "mocha test/logistic_abs_factory_app/test.ts"
+    "test-vm": "mocha test/state_design/vending_machine/test.ts",
+    "test-sk": "mocha test/statergy/shopping_kart/test.ts",
+    "test-np": "mocha test/observer/news_paper/test.ts",
+    "test-car": "mocha test/decorator/car/test.ts",
+    "test-logistic": "mocha test/factory_method/logistic_app/test.ts",
+    "test-abs-logistic": "mocha test/abstract_factory/logistic_abs_factory_app/test.ts"
   },
   "mocha": {
     "require": [

@@ -1,9 +1,9 @@
 import { expect } from "chai";
 
-import Car from "../../src/car/car";
-import HatchBack from "../../src/car/hatchback";
-import AirCondition from "../../src/car/car_feature/air_condition";
-import SportMode from "../../src/car/car_feature/sport_mode";
+import Car from "../../../src/decorator/car/car";
+import HatchBack from "../../../src/decorator/car/hatchback";
+import AirCondition from "../../../src/decorator/car/car_feature/air_condition";
+import SportMode from "../../../src/decorator/car/car_feature/sport_mode";
 
 describe("Test the Car with Addon Features", () => {
   describe("Test HatchBack Car", () => {
@@ -31,10 +31,10 @@ describe("Test the Car with Addon Features", () => {
     });
 
     it("Sport Mode + AC Reduce Mileage by 6", () => {
-        let sportMode = new SportMode(hatchBack);
-        let ac = new AirCondition(sportMode);
-        let sportAcMileage = ac.getMileage();
-        expect(rawMileage - sportAcMileage).to.be.equal(6);
-      });
+      let sportMode = new SportMode(hatchBack);
+      let ac = new AirCondition(sportMode);
+      let sportAcMileage = ac.getMileage();
+      expect(rawMileage - sportAcMileage).to.be.equal(6);
+    });
   });
 });

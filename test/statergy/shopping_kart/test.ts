@@ -1,6 +1,6 @@
 import { expect } from "chai";
-import { Card } from "../../src/shopping_kart/payment/card";
-import ShoppingKart from "./../../src/shopping_kart/shoppingKart";
+import { Card } from "../../../src/statergy/shopping_kart/payment/card";
+import ShoppingKart from "./../../../src/statergy/shopping_kart/shoppingKart";
 
 describe("Test the Shopping Kart", () => {
   describe("Shop for Code: 101 & 102", () => {
