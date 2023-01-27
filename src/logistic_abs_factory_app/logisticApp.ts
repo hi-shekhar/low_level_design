@@ -1,14 +1,19 @@
-import Transport from "./concrete_product/transport";
-import CountryTransport from "./factory/transport";
+import RoadLogistic from "./concrete_product_interface/roadLogistic";
+import SeaLogistic from "./concrete_product_interface/seaLogistic";
+import Transport from "./factory/transport";
 
 export default class LogisticApp {
-  private transport:CountryTransport
-  constructor(transport:CountryTransport) {
+  private transport: Transport;
+  constructor(transport: Transport) {
     console.log("welcome to the Logistic App");
     this.transport = transport;
   }
 
-  planDelivery(): Transport {
-   return this.transport.deliver();
+  planDeliveryByRoad(): RoadLogistic {
+    return this.transport.byRoad();
+  }
+
+  planDeliveryBySea(): SeaLogistic {
+    return this.transport.bySea();
   }
 }
