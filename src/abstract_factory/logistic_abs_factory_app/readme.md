@@ -12,7 +12,7 @@ on their concrete classes.
 
 **Logistic Abstract App**
 
-![Logistic Abstract App](./../assets/logistic_abs_app.png)
+![Logistic Abstract App](./../../assets/logistic_abs_app.png)
 
 **Idle Steps:**
 
