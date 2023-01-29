@@ -14,7 +14,8 @@
     "test-logs": "mocha test/singleton/logger/test.ts",
     "test-remote": "mocha test/command/remote_control/test.ts",
     "test-socket": "mocha test/adapter/socket/test.ts",
-    "test-tourism": "mocha test/facade/tourism/test.ts"
+    "test-tourism": "mocha test/facade/tourism/test.ts",
+    "test-null": "mocha test/null_object/ticket/test.ts"
   },
   "mocha": {
     "require": [
