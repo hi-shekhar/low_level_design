@@ -12,7 +12,8 @@
     "test-logistic": "mocha test/factory_method/logistic_app/test.ts",
     "test-abs-logistic": "mocha test/abstract_factory/logistic_abs_factory_app/test.ts",
     "test-logs": "mocha test/singleton/logger/test.ts",
-    "test-remote": "mocha test/command/remote_control/test.ts"
+    "test-remote": "mocha test/command/remote_control/test.ts",
+    "test-socket": "mocha test/adapter/socket/test.ts"
   },
   "mocha": {
     "require": [
