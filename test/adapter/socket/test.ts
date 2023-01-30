@@ -3,7 +3,6 @@ import {
   IndianApliance,
   IndiaToEuroAdapter,
 } from "./../../../src/adapter/socket/socket";
-import * as sinon from "sinon";
 
 describe("Test the Adapter", () => {
   let indianApliance: IndianApliance;
