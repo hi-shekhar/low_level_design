@@ -16,7 +16,8 @@
     "test-socket": "mocha test/adapter/socket/test.ts",
     "test-tourism": "mocha test/facade/tourism/test.ts",
     "test-null": "mocha test/null_object/ticket/test.ts",
-    "test-cache": "mocha test/proxy/caching/test.ts"
+    "test-cache": "mocha test/proxy/caching/test.ts",
+    "test-data-miner": "mocha test/template/data_miner/test.ts"
   },
   "mocha": {
     "require": [
